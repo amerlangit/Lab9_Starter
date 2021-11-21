@@ -174,7 +174,13 @@
     const level3 = () => { level4(); };
     const level4 = () => { console.trace(); };
     errorBtns[13].addEventListener('click', () => { level1(); });
-    errorBtns[14].addEventListener('click', () => { });
+    errorBtns[14].addEventListener('click', () => { 
+      let err = 5 * g;
+    });
+
+    window.onerror = function (error) {
+      console.log("Wassup, an error occured my guy");
+    };
 
   </script>
 </body>
